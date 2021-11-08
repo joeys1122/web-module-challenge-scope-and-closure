@@ -61,6 +61,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+  A closure is when a variable or function that is referenced inside of a function looks outside of that function to find a meaning or value.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,9 +85,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+  Closure is used when the return function grabs the "name" parameter from the personalDice function. You can tell because the ${name} used in the console.log is not declared in the return function so it has to go outside itself and get the meaning from the personalDice function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+  The name "Dan" is always the same because it is passed an argument for the personalDice function, whereas the number that is rolled could change because it derives it's value from the random number generator saved to the newRoll variable inside the function.
+
 c. What is the lexical scope of `newRoll`? 
 
+  The lexical scope of 'newRoll' is within the personalDice function.
 
 ### Task 3 - Stretch Goals
 
