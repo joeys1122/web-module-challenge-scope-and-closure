@@ -29,10 +29,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+    In counter1 the count variable and the counter function are nested inside of a function called counterMaker which is then assigned to the variable counter1, whereas in counter2 the count variable and the counter function exist in the global scope.
+
   2. Which of the two uses a closure? How can you tell?
+
+    counter1 uses a closure. You can tell because the inner function ("counter()") goes into the outer function ("counterMaker()") and grabs a value out and uses it.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+    counter1 would be preferable if you wanted construct several different counters that only iterate on the variables defined within themselves.
+
+    counter 2 would be preferable if you wanted to count a variable that exists in the global scope.
 */
 
 // counter1 code
